@@ -760,21 +760,34 @@ nav ul li a:hover, nav ul li a.active {
     /* --- TAMBAHAN BUAT FOTO --- */
     
     /* 1. Target Pembungkus Fotonya (Cek HTML kamu, biasanya .home-img) */
-    .home-img {
-        width: 100%;             /* Pastikan wadahnya selebar layar HP */
-        display: flex;           /* Aktifkan mode flex */
-        justify-content: center; /* PERINTAH PENTING: Paksa isi ke TENGAH */
-        align-items: center;     /* Rata tengah vertikal */
-        margin-top: 30px;        /* Kasih jarak biar gak nempel sama menu */
-        margin-bottom: 20px;     /* Jarak ke tulisan "Hello World" */
-    }
+   /* 1. Target Pembungkus Foto (UPDATE PAKSA TENGAH) */
+   .home-img {
+    width: 100% !important;        /* Lebar wadah full layar */
+    display: flex !important;      /* Pakai Flexbox */
+    justify-content: center !important; /* Rata Tengah Horizontal */
+    align-items: center !important;     /* Rata Tengah Vertikal */
+    margin: 30px 0 !important;     /* Jarak atas bawah, Kiri Kanan 0 */
+    padding: 0 !important;         /* Hapus padding */
+    text-align: center !important; 
+    background: transparent !important; 
+    float: none !important;        /* Matikan float */
+}
 
-    /* 2. Target Fotonya (Gambarnya) */
-    .home-img img {
-        width: 60%;              /* Kecilin dikit biar gak menuhin satu layar */
-        max-width: 250px;        /* Batas maksimal biar gak pecah */
-        height: auto;            /* Tinggi otomatis */
-    }
+/* 2. Target Fotonya (Gambarnya) */
+.home-img img {
+    /* Kita kunci ukurannya biar bulet sempurna di HP */
+    width: 250px !important;       
+    height: 250px !important;      
+    
+    /* Jurus tengahin gambar blok */
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    
+    /* Biar bulat */
+    border-radius: 50% !important;
+    object-fit: cover !important;  
+}
     
     /* 3. Target Tulisan (Hello World / I'm Frontend) biar tengah juga */
     .home-content {
@@ -793,26 +806,6 @@ nav ul li a:hover, nav ul li a.active {
 
 /* ... (kode header di atasnya biarin aja) ... */
 
-    /* --- BAGIAN FOTO YANG DIPERBAIKI --- */
-    .home-img {
-        width: 100% !important;      /* WAJIB: Paksa lebar wadah 100% layar */
-        display: flex !important;    /* Aktifkan Flexbox */
-        justify-content: center !important; /* Paksa isi ke TENGAH Horizontal */
-        align-items: center !important;     /* Paksa isi ke TENGAH Vertikal */
-        margin-left: 0 !important;   /* Hapus margin kiri bawaan laptop */
-        margin-right: 0 !important;  /* Hapus margin kanan bawaan laptop */
-        margin-top: 30px;            /* Jarak dari atas */
-        margin-bottom: 20px;         /* Jarak ke bawah */
-        float: none !important;      /* Matikan fitur float kalau ada */
-        text-align: center !important; /* Jaga-jaga kalau fotonya tipe inline */
-    }
 
-    .home-img img {
-        display: block !important;   /* Jadikan blok */
-        margin: 0 auto !important;   /* Margin kiri-kanan otomatis (tengah) */
-        width: 60%;                  /* Ukuran foto */
-        max-width: 250px;            /* Batas maksimal */
-        height: auto;
-    }
     
     /* ... (kode lain di bawahnya biarin aja) ... */
