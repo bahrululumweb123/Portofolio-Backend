@@ -37,3 +37,6 @@ app.listen(port, () => {
     console.log(`Server portofolio berjalan di http://localhost:${port}`);
 });
 module.exports = app;
+app.get('/', (req, res) => {
+    res.send('Server Backend Aman Jaya! 🚀');
+});
