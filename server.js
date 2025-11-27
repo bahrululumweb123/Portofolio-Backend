@@ -1,17 +1,20 @@
 const express = require('express');
+const path = require('path'); // Panggil library Path (GPS-nya folder)
 const app = express();
 const port = process.env.PORT || 3000;
 
 // --- BAGIAN PENTING ---
-// Kode ini otomatis mencari file 'index.html' di folder 'public'
-// Jadi kamu gak perlu bikin app.get('/') lagi di bawah.
-app.use(express.static('public')); 
-// ----------------------
+// Kita kasih tau server: "Eh, folder 'public' itu ada di sebelahmu persis!"
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Jalankan Server
-app.listen(port, () => {
-    console.log(`Server portofolio berjalan di http://localhost:${port}`);
+// Kita paksa: Kalau buka link utama, kasih file index.html
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Export buat Vercel
+// Jalankan server
+app.listen(port, () => {
+    console.log(`Server jalan di port ${port}`);
+});
+
 module.exports = app;
