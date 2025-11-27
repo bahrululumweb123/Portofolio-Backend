@@ -69,23 +69,62 @@
                 <!-- BAGIAN KANAN: Formulir -->
                 <!-- action="/kirim" mengarah ke app.post('/kirim') di server.js -->
 <!-- Perhatikan action dan method-nya -->
-<form action="/kirim-pesan" method="POST">
+<section class="contact" id="contact">
+    <h2 class="heading">Hubungi <span>Saya</span></h2>
 
-    <div class="input-box">
-        <input type="text" name="nama" placeholder="Nama Lengkap" required>
+    <div class="contact-container">
+        <!-- KOLOM KIRI: Informasi Kontak -->
+        <div class="contact-info">
+            <h3>Informasi Kontak</h3>
+            <p>Siap berdiskusi tentang proyek baru, ide kreatif, atau peluang kolaborasi.</p>
+
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <h4>Lokasi</h4>
+                    <p>Kota Serang, Banten</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <h4>Email</h4>
+                    <p>bahrululumweb123@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                    <h4>WhatsApp</h4>
+                    <p>+62 838-9884-6405</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- KOLOM KANAN: Form Keren -->
+        <div class="contact-form">
+            <form action="/kirim-pesan" method="POST">
+                <h3>Kirim Pesan</h3>
+                
+                <div class="input-box">
+                    <input type="text" name="nama" placeholder="Nama Lengkap" required>
+                </div>
+                
+                <div class="input-box">
+                    <input type="email" name="email" placeholder="Alamat Email" required>
+                </div>
+                
+                <div class="input-box">
+                    <textarea name="pesan" placeholder="Tulis pesan Anda..." cols="30" rows="10" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Kirim Sekarang</button>
+            </form>
+        </div>
     </div>
-
-    <div class="input-box">
-        <input type="email" name="email" placeholder="Alamat Email" required>
-    </div>
-
-    <div class="input-box">
-        <textarea name="pesan" placeholder="Pesan Anda..." required></textarea>
-    </div>
-
-    <button type="submit" class="btn">Kirim Pesan</button>
-
-</form>
+</section>
 
             </div>
         </div>

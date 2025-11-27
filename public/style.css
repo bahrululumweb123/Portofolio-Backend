@@ -913,5 +913,144 @@ nav ul li a:hover, nav ul li a.active {
         width: 100%;
     }
 
+    /* --- GAYA KONTAK KEREN --- */
+
+.contact {
+    min-height: 100vh;
+    padding: 50px 9%; /* Kiri kanan 9% biar gak mepet */
+    background: #081b29; /* Background Gelap */
+    color: #ededed;
+}
+
+.heading {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.heading span {
+    color: #00abf0; /* Warna Biru Andalan */
+}
+
+/* Wadah Utama (Kiri Informasi, Kanan Form) */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap; /* Biar responsif di HP */
+}
+
+/* --- BAGIAN KIRI: INFO --- */
+.contact-info {
+    flex: 1; /* Ambil separuh layar */
+    background: #112e42;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #00abf0; /* Efek Glowing dikit */
+}
+
+.contact-info h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #00abf0;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.info-item i {
+    font-size: 24px;
+    color: #00abf0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #081b29;
+    border-radius: 50%;
+}
+
+/* --- BAGIAN KANAN: FORM --- */
+.contact-form {
+    flex: 1; /* Ambil separuh layar */
+}
+
+.contact-form h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Kotak Inputnya */
+.input-box input, 
+.input-box textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    color: #ededed;
+    background: #112e42; /* Warna isian gelap */
+    border-radius: 10px;
+    border: 2px solid transparent; /* Border transparan dulu */
+    margin-bottom: 15px;
+    resize: none;
+    font-family: 'Poppins', sans-serif; /* Pastikan font sama */
+}
+
+/* Efek pas diklik (Fokus) */
+.input-box input:focus, 
+.input-box textarea:focus {
+    border-color: #00abf0; /* Border jadi biru */
+    background: #081b29;
+    outline: none;
+}
+
+/* Tombol Kirim */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #00abf0;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #00abf0;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+    width: 100%; /* Tombol full lebar */
+}
+
+.btn:hover {
+    background: transparent;
+    color: #00abf0;
+    border: 2px solid #00abf0;
+}
+
+/* --- RESPONSIF HP --- */
+@media (max-width: 768px) {
+    .contact {
+        padding: 100px 5%;
+    }
+    
+    .contact-container {
+        flex-direction: column; /* Tumpuk ke bawah */
+    }
+    
+    .contact-info, .contact-form {
+        width: 100%; /* Lebar full di HP */
+    }
+}
 
 /* ... (kode header di atasnya biarin aja) ... */
