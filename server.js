@@ -36,3 +36,4 @@ app.post('/kirim', (req, res) => {
 app.listen(port, () => {
     console.log(`Server portofolio berjalan di http://localhost:${port}`);
 });
+module.exports = app;
