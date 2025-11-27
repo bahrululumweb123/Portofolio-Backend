@@ -18,13 +18,15 @@ app.post('/kirim-pesan', async (req, res) => {
     const { nama, email, pesan } = req.body;
 
     // 1. Setting Tukang Pos (Transporter)
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: process.env.EMAIL_USER, // Nanti kita setting di Vercel
-            pass: process.env.EMAIL_PASS  // Password sakti tadi
-        }
-    });
+   const transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com', // Server Gmail
+    port: 465,              // Port aman (SSL)
+    secure: true,           // Wajib True buat port 465
+    auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
+    }
+});
 
     // 2. Setting Isi Surat
     const mailOptions = {
