@@ -752,7 +752,36 @@ nav ul li a:hover, nav ul li a.active {
         font-size: 16px;         /* Ukuran font pas */
     }
 }
+/* --- TAMPILAN KHUSUS LAPTOP/PC --- */
 
+/* 1. Rapikan Wadahnya */
+.home-img {
+    display: flex;
+    justify-content: center; /* Tengah Horizontal */
+    align-items: center;     /* Tengah Vertikal */
+}
+
+/* 2. Bikin Gambarnya Bulat & Rapi */
+.home-img img {
+    width: 400px;        /* Ukuran Standar Laptop */
+    height: 400px;       /* Wajib sama biar bulat */
+    border-radius: 50%;  /* JURUS PEMBULAT */
+    object-fit: cover;   /* Biar muka gak gepeng */
+    object-position: top center; /* Fokus ke Kepala/Wajah */
+    
+    /* Hiasan (Opsional) */
+    border: 3px solid #00abf0;
+    box-shadow: 0 0 20px #00abf0;
+    transition: 0.3s;
+}
+
+/* 3. Efek kalau mouse diarahkan (Hover) */
+.home-img img:hover {
+    transform: scale(1.05); /* Membesar dikit */
+    box-shadow: 0 0 40px #00abf0;
+}
+
+/* --- BATAS TAMPILAN LAPTOP (Di bawah ini kode HP yang tadi) --- */
 @media screen and (max-width: 768px) {
   /* =========================================
    PERBAIKAN TOTAL (LAPTOP & HP)
