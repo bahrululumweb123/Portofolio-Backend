@@ -790,3 +790,29 @@ nav ul li a:hover, nav ul li a.active {
         width: 100%;
     }
 }
+
+/* ... (kode header di atasnya biarin aja) ... */
+
+    /* --- BAGIAN FOTO YANG DIPERBAIKI --- */
+    .home-img {
+        width: 100% !important;      /* WAJIB: Paksa lebar wadah 100% layar */
+        display: flex !important;    /* Aktifkan Flexbox */
+        justify-content: center !important; /* Paksa isi ke TENGAH Horizontal */
+        align-items: center !important;     /* Paksa isi ke TENGAH Vertikal */
+        margin-left: 0 !important;   /* Hapus margin kiri bawaan laptop */
+        margin-right: 0 !important;  /* Hapus margin kanan bawaan laptop */
+        margin-top: 30px;            /* Jarak dari atas */
+        margin-bottom: 20px;         /* Jarak ke bawah */
+        float: none !important;      /* Matikan fitur float kalau ada */
+        text-align: center !important; /* Jaga-jaga kalau fotonya tipe inline */
+    }
+
+    .home-img img {
+        display: block !important;   /* Jadikan blok */
+        margin: 0 auto !important;   /* Margin kiri-kanan otomatis (tengah) */
+        width: 60%;                  /* Ukuran foto */
+        max-width: 250px;            /* Batas maksimal */
+        height: auto;
+    }
+    
+    /* ... (kode lain di bawahnya biarin aja) ... */
