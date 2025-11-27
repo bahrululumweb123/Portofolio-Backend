@@ -755,38 +755,43 @@ nav ul li a:hover, nav ul li a.active {
 
 @media screen and (max-width: 768px) {
     
-    /* ... (kode header/menu yang tadi biarin aja) ... */
-
-    /* --- TAMBAHAN BUAT FOTO --- */
-    
-    /* 1. Target Pembungkus Fotonya (Cek HTML kamu, biasanya .home-img) */
-   /* 1. Target Pembungkus Foto (UPDATE PAKSA TENGAH) */
-/* --- UPDATE FINAL BUAT FOTO (ANTI GESER) --- */
-.home-img {
-    width: 100% !important;        /* Lebar wadah full layar */
-    display: flex !important;      /* Pakai Flexbox */
-    justify-content: center !important; /* Rata Tengah Horizontal */
-    align-items: center !important;     /* Rata Tengah Vertikal */
-    margin: 30px 0 !important;     /* Jarak atas bawah 30px */
-    padding: 0 !important;         /* Hapus padding */
-    text-align: center !important; 
-    float: none !important;        /* Matikan float */
-    background: transparent !important;
+  /* 1. KITA ATUR INDUKNYA DULU (Biasanya tag section atau .home) */
+  section {
+    display: flex !important;
+    flex-direction: column !important; /* Susun atas-bawah */
+    align-items: center !important;    /* PAKSA SEMUA ISI KE TENGAH */
+    justify-content: center !important;
+    text-align: center !important;
 }
 
+/* 2. BARU ATUR WADAH FOTONYA */
+.home-img {
+    width: 100% !important;
+    max-width: 100% !important; /* Pastikan gak lebih dari layar */
+    
+    display: flex !important;
+    justify-content: center !important; /* Tengah Horizontal */
+    align-items: center !important;     /* Tengah Vertikal */
+    
+    margin: 20px auto !important; /* Atas-Bawah 20px, Kiri-Kanan AUTO (Tengah) */
+    padding: 0 !important;
+    
+    /* Reset posisi aneh-aneh */
+    position: static !important;
+    float: none !important;
+    transform: none !important;
+}
+
+/* 3. ATUR GAMBARNYA */
 .home-img img {
-    /* KUNCI UKURAN PASTI (Biar Bulat Sempurna) */
-    width: 250px !important;       
-    height: 250px !important;      
+    width: 250px !important;
+    height: 250px !important;
     
-    /* Jurus tengahin gambar blok */
     display: block !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin: 0 auto !important; /* Jurus pamungkas tengahin blok */
     
-    /* Dekorasi */
     border-radius: 50% !important;
-    object-fit: cover !important;  
+    object-fit: cover !important;
 }
 
 }
