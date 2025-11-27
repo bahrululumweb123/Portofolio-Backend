@@ -755,45 +755,91 @@ nav ul li a:hover, nav ul li a.active {
 
 @media screen and (max-width: 768px) {
     
-  /* 1. KITA ATUR INDUKNYA DULU (Biasanya tag section atau .home) */
-  section {
-    display: flex !important;
-    flex-direction: column !important; /* Susun atas-bawah */
-    align-items: center !important;    /* PAKSA SEMUA ISI KE TENGAH */
-    justify-content: center !important;
-    text-align: center !important;
-}
+  /* --- MULAI KODE KHUSUS HP (V3 FINAL) --- */
+@media screen and (max-width: 768px) {
 
-/* 2. BARU ATUR WADAH FOTONYA */
-.home-img {
-    width: 100% !important;
-    max-width: 100% !important; /* Pastikan gak lebih dari layar */
-    
-    display: flex !important;
-    justify-content: center !important; /* Tengah Horizontal */
-    align-items: center !important;     /* Tengah Vertikal */
-    
-    margin: 20px auto !important; /* Atas-Bawah 20px, Kiri-Kanan AUTO (Tengah) */
-    padding: 0 !important;
-    
-    /* Reset posisi aneh-aneh */
-    position: static !important;
-    float: none !important;
-    transform: none !important;
-}
+    /* 1. HEADER: Biar menu bisa turun ke bawah */
+    header {
+        height: auto !important;
+        flex-direction: column;
+        padding: 15px 5%;
+        background: #081b29; /* Pastikan background gelap */
+    }
 
-/* 3. ATUR GAMBARNYA */
-.home-img img {
-    width: 250px !important;
-    height: 250px !important;
+    nav {
+        width: 100%;
+        margin-top: 15px;
+    }
     
-    display: block !important;
-    margin: 0 auto !important; /* Jurus pamungkas tengahin blok */
-    
-    border-radius: 50% !important;
-    object-fit: cover !important;
-}
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        width: 100%;
+        padding: 0;
+    }
 
+    /* 2. SECTION UTAMA (HOME): Biar isinya gak kepotong */
+    section {
+        height: auto !important;     /* Tinggi otomatis ngikutin isi */
+        min-height: 100vh;           /* Minimal setinggi layar */
+        padding: 120px 5% 50px 5%;   /* Jarak biar gak ketutup header */
+        flex-direction: column-reverse !important; /* PENTING: Foto di ATAS, Teks di BAWAH */
+        justify-content: center;
+    }
+
+    /* 3. BAGIAN FOTO (Supaya di Atas & Tengah) */
+    .home-img {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 0 0 30px 0 !important; /* Jarak bawah ke teks */
+        padding: 0 !important;
+        background: transparent !important;
+    }
+
+    .home-img img {
+        width: 220px !important;    /* Ukuran pas buat HP */
+        height: 220px !important;
+        display: block !important;
+        margin: 0 auto !important;
+        border-radius: 50% !important;
+        object-fit: cover !important;
+        border: 2px solid #00abf0;  /* Variasi list biru dikit */
+    }
+
+    /* 4. BAGIAN TEKS (Supaya di Bawah & Tengah) */
+    .home-content {
+        width: 100% !important;
+        text-align: center !important;
+        align-items: center !important;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home-content h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    /* 5. TOMBOL & SOSMED (Paksa ke Tengah) */
+    .btn-box {
+        display: flex !important;
+        justify-content: center !important; /* KUNCI: Biar tombol ke tengah */
+        width: 100% !important;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    
+    .social-media {
+        display: flex !important;
+        justify-content: center !important; /* KUNCI: Sosmed ke tengah */
+        width: 100% !important;
+        margin-top: 20px;
+    }
+}
+/* --- SELESAI KODE KHUSUS HP --- */
 }
     
     /* 3. Target Tulisan (Hello World / I'm Frontend) biar tengah juga */
