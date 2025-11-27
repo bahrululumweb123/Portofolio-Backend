@@ -761,21 +761,21 @@ nav ul li a:hover, nav ul li a.active {
     
     /* 1. Target Pembungkus Fotonya (Cek HTML kamu, biasanya .home-img) */
    /* 1. Target Pembungkus Foto (UPDATE PAKSA TENGAH) */
-   .home-img {
+/* --- UPDATE FINAL BUAT FOTO (ANTI GESER) --- */
+.home-img {
     width: 100% !important;        /* Lebar wadah full layar */
     display: flex !important;      /* Pakai Flexbox */
     justify-content: center !important; /* Rata Tengah Horizontal */
     align-items: center !important;     /* Rata Tengah Vertikal */
-    margin: 30px 0 !important;     /* Jarak atas bawah, Kiri Kanan 0 */
+    margin: 30px 0 !important;     /* Jarak atas bawah 30px */
     padding: 0 !important;         /* Hapus padding */
     text-align: center !important; 
-    background: transparent !important; 
     float: none !important;        /* Matikan float */
+    background: transparent !important;
 }
 
-/* 2. Target Fotonya (Gambarnya) */
 .home-img img {
-    /* Kita kunci ukurannya biar bulet sempurna di HP */
+    /* KUNCI UKURAN PASTI (Biar Bulat Sempurna) */
     width: 250px !important;       
     height: 250px !important;      
     
@@ -784,9 +784,11 @@ nav ul li a:hover, nav ul li a.active {
     margin-left: auto !important;
     margin-right: auto !important;
     
-    /* Biar bulat */
+    /* Dekorasi */
     border-radius: 50% !important;
     object-fit: cover !important;  
+}
+
 }
     
     /* 3. Target Tulisan (Hello World / I'm Frontend) biar tengah juga */
@@ -802,10 +804,6 @@ nav ul li a:hover, nav ul li a.active {
         display: flex;
         width: 100%;
     }
-}
+
 
 /* ... (kode header di atasnya biarin aja) ... */
-
-
-    
-    /* ... (kode lain di bawahnya biarin aja) ... */
