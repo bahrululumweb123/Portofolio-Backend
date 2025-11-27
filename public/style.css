@@ -752,3 +752,41 @@ nav ul li a:hover, nav ul li a.active {
         font-size: 16px;         /* Ukuran font pas */
     }
 }
+
+@media screen and (max-width: 768px) {
+    
+    /* ... (kode header/menu yang tadi biarin aja) ... */
+
+    /* --- TAMBAHAN BUAT FOTO --- */
+    
+    /* 1. Target Pembungkus Fotonya (Cek HTML kamu, biasanya .home-img) */
+    .home-img {
+        width: 100%;             /* Pastikan wadahnya selebar layar HP */
+        display: flex;           /* Aktifkan mode flex */
+        justify-content: center; /* PERINTAH PENTING: Paksa isi ke TENGAH */
+        align-items: center;     /* Rata tengah vertikal */
+        margin-top: 30px;        /* Kasih jarak biar gak nempel sama menu */
+        margin-bottom: 20px;     /* Jarak ke tulisan "Hello World" */
+    }
+
+    /* 2. Target Fotonya (Gambarnya) */
+    .home-img img {
+        width: 60%;              /* Kecilin dikit biar gak menuhin satu layar */
+        max-width: 250px;        /* Batas maksimal biar gak pecah */
+        height: auto;            /* Tinggi otomatis */
+    }
+    
+    /* 3. Target Tulisan (Hello World / I'm Frontend) biar tengah juga */
+    .home-content {
+        text-align: center;      /* Ratakan teks ke tengah */
+        align-items: center;     /* Kalau pakai flexbox, ini buat tengahin */
+        width: 100%;
+    }
+    
+    /* 4. Tombol di bawah juga ketengahin */
+    .social-media, .btn-box {
+        justify-content: center; /* Biar ikon sosmed ke tengah */
+        display: flex;
+        width: 100%;
+    }
+}
