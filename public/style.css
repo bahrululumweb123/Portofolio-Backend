@@ -781,6 +781,7 @@ nav ul li a:hover, nav ul li a.active {
     box-shadow: 0 0 40px #00abf0;
 }
 
+
 /* --- BATAS TAMPILAN LAPTOP (Di bawah ini kode HP yang tadi) --- */
 @media screen and (max-width: 768px) {
   /* =========================================
@@ -798,7 +799,7 @@ nav ul li a:hover, nav ul li a.active {
 
 /* Ini bikin gambar jadi bulat & fokus ke wajah */
 .home-img img {
-    width: 400px;       /* Ukuran Standar Laptop */
+    width: 350px;       /* Ukuran Standar Laptop */
     height: 400px;
     border-radius: 50%; /* Wajib Bulat */
     object-fit: cover;  /* Biar gambar pas */
