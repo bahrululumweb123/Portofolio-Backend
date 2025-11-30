@@ -1150,3 +1150,44 @@ section { /* Atau .home */
     min-height: 100vh;              /* Full layar */
     gap: 50px;                      /* Jarak antar Teks dan Gambar */
 }
+
+/* --- ATURAN KHUSUS HP (RESPONSIVE) --- */
+@media (max-width: 991px) {
+    
+    /* 1. Ubah susunan jadi Atas-Bawah */
+    section {
+        flex-direction: column-reverse; /* Gambar di Atas, Teks di Bawah */
+        padding: 50px 5% 20px 5%;       /* Atur jarak pinggir biar lega */
+        gap: 20px;                      /* Jarak antara gambar dan teks */
+        justify-content: center;        /* Semuanya di tengah */
+        min-height: auto;               /* Tinggi menyesuaikan isi */
+    }
+
+    /* 2. Kecilkan Gambar di HP (Biar gak Raksasa) */
+    .home-img {
+        width: 260px;       /* Ukuran pas buat HP */
+        height: 260px;      /* Harus sama biar bulat */
+        max-width: 70%;     /* Jaga-jaga biar gak melebar */
+        margin-bottom: 10px;
+    }
+
+    /* 3. Rapikan Teks (Rata Tengah) */
+    .hero-content {
+        max-width: 100%;    /* Pakai lebar penuh */
+        text-align: center; /* Tulisan jadi di tengah */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Tombol & tulisan di tengah */
+    }
+
+    /* 4. Sesuaikan Ukuran Font Judul di HP */
+    .hero-content h1 {
+        font-size: 2.2rem;  /* Kecilkan dikit judulnya */
+    }
+    
+    /* 5. Pastikan tombol/sosmed ada di tengah */
+    .cta-group, .social-icons {
+        justify-content: center;
+        width: 100%;
+    }
+}
