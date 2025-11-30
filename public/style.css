@@ -1055,3 +1055,26 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 /* ... (kode header di atasnya biarin aja) ... */
+/* 1. Styling Teks Mengetik (Warna & Posisi) */
+.typing-text {
+    color: #0ea5e9; /* Biru Neon */
+    text-shadow: 0 0 15px rgba(14, 165, 233, 0.6); /* Efek Cahaya */
+    display: inline !important; /* WAJIB: Supaya tidak jatuh ke bawah */
+}
+
+/* 2. Styling Kursor Kedip-kedip */
+.typed-cursor {
+    color: #0ea5e9; /* Samakan warna dengan teks */
+    font-size: 3rem; /* Sesuaikan besar kursor */
+    display: inline !important; /* WAJIB: Supaya kursor nempel */
+}
+
+/* 3. Merapatkan Jarak Judul & Paragraf */
+.hero-content h1 {
+    line-height: 1.2;      /* Jarak antar baris 'I'm a' dan 'Frontend' */
+    margin-bottom: 5px;    /* Jarak tipis ke deskripsi bawah */
+}
+
+.hero-content p {
+    margin-top: 0;         /* Pastikan deskripsi langsung nempel naik */
+}
