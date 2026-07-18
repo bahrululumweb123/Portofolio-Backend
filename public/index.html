@@ -2,8 +2,9 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beranda - Portofolio Modern</title>
+     <link rel="icon" type="image/png" href="upoto.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome untuk Ikon Sosial Media -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -37,9 +38,8 @@
             
             <h1>I'm a <br> 
                 <!-- Ini Teks yang Akan Bergerak -->
-                <span class="typing-text">Frontend Developer</span>
+                <span class="typing-text"></span>
             </h1>
-            
             <p>Web Developer,Mengubah baris kode menjadi solusi digital yang interaktif, modern, dan fungsional.
             <!-- Tombol & Sosmed -->
             <div class="cta-group">
@@ -52,16 +52,26 @@
             </div>
         </div>
 
-        <div class="hero-image-section">
-            <div class="image-wrapper">
-                <!-- GANTI FOTO DI SINI -->
-                <img src="Pas Photo Terbaru 2026.jpeg" alt="Profile">
-                
-                
-            </div>
-        </div>
+       <!-- GANTI KODE LAMA DENGAN INI -->
+       <div class="home-img">
+            <img src="PAS PHOTO TERBARU 2026.jpeg" alt="Profile">
+       </div>
 
     </section>
+    
+<!-- Library Typed.js (Wajib ada) -->
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
+<!-- Script Pengaturan Ketikan -->
+<script>
+    var typed = new Typed('.typing-text', {
+        strings: ['Web Developer', 'Web Developer'],
+        typeSpeed: 100,  // Kecepatan ngetik
+        backSpeed: 50,   // Kecepatan hapus
+        backDelay: 2000, // Diam 2 detik sebelum hapus
+        loop: true,       // Mengulang terus
+        showCursor: false,
+    });
+</script>
 </body>
 </html>
